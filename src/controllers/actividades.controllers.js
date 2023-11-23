@@ -3,7 +3,7 @@ import { pool } from '../db.js';
 
 export const selectActividades = async (req, res) => {
     try {
-        const [rows] = await pool.query('SELECT * FROM Actividades')
+        const [rows] = await pool.query('SELECT * FROM usuarioproyectorolactividades_vw01')
         res.json(rows)
     } catch (error) {
         res.status(500).json({
